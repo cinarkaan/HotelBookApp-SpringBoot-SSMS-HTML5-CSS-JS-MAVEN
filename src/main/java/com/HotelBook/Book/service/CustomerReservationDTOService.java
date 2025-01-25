@@ -1,0 +1,22 @@
+package com.HotelBook.Book.service;
+
+import com.HotelBook.Book.entity.CustomerReservationDTO;
+import com.HotelBook.Book.repository.CustomerReservationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class CustomerReservationDTOService {
+
+    @Autowired(required = true)
+    private CustomerReservationRepository customerReservationRepository;
+
+    public List<CustomerReservationDTO> getApplications () {
+        return customerReservationRepository.getAllApplications("Beklemede");
+    }
+
+
+
+}
