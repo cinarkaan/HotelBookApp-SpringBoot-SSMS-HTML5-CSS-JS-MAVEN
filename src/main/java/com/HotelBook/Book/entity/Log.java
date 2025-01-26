@@ -1,9 +1,7 @@
 package com.HotelBook.Book.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -12,11 +10,23 @@ import java.util.Date;
 public class Log {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int LogID;
     private int KullaniciId;
     private String IslemTipi;
     private String IslemDetayi;
     private Date IslemTarihi;
+
+    public Log () {
+
+    }
+
+    public Log(int kullaniciId, String islemTipi, String islemDetayi, Date islemTarihi) {
+        KullaniciId = kullaniciId;
+        IslemTipi = islemTipi;
+        IslemDetayi = islemDetayi;
+        IslemTarihi = islemTarihi;
+    }
 
     public int getLogID() {
         return LogID;

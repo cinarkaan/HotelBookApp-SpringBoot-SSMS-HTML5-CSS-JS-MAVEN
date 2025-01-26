@@ -1,7 +1,7 @@
 package com.HotelBook.Book.service;
 
 import com.HotelBook.Book.entity.Room;
-import com.HotelBook.Book.entity.RoomType;
+import com.HotelBook.Book.entity.RoomStatus;
 import com.HotelBook.Book.repository.RoomRepository;
 import com.HotelBook.Book.repository.RoomStatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,11 +29,11 @@ public class RoomService {
         return roomList;
     }
 
-    public Room updateRoom (Long ID , RoomType roomType) {
+    public Room updateRoom (Long ID , RoomStatus roomStatus) {
         Optional<Room> roomOptional = roomRepository.findById(ID);
         System.out.println(roomOptional.isPresent() + "-----");
         if (roomOptional.isPresent()) {
-            roomOptional.get().setDurum(RoomType.Dolu);
+            roomOptional.get().setDurum(RoomStatus.Dolu);
             return roomRepository.save(roomOptional.get());
         } else {
             throw new RuntimeException("User not found");

@@ -18,4 +18,8 @@ public class LogService {
         return logRepository.findAll();
     }
 
+    public Log addLogRecord (Log log) {
+        return logRepository.save(log);
+    }
+
 }

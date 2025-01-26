@@ -1,6 +1,6 @@
 package com.HotelBook.Book.entity;
 
-public enum RoomType {
+public enum RoomStatus {
     Dolu,
     Bakımda,
     Boş

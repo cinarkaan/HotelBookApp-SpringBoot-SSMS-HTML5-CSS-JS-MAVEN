@@ -11,10 +11,14 @@ public class LoginService {
     @Autowired(required = true)
     private LoginRepository loginRepository;
 
-    public boolean authenticate(String kullaniciAdi, String sifre) {
+    public User authenticate(String kullaniciAdi, String sifre) {
         User user = loginRepository.findByKullaniciAdi(kullaniciAdi);
-        return user != null && user.getSifre().equals(sifre); // Kullanıcı doğrulandı
+        if (user != null && user.getSifre().equals(sifre))
+            return user; // Kullanıcı doğrulandı
         // Hatalı kullanıcı adı veya şifre
+        else {
+            return null;
+        }
     }
 
 }

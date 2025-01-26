@@ -174,7 +174,6 @@
 </head>
 <body>
 <div class="sidebar">
-
         <script>
             $(document).ready(function () {
                 $('#dataTable').DataTable({
@@ -232,6 +231,14 @@
             $('#showReservationDetails').on('click', function(event) {
                 event.preventDefault();
                 showReservationsTable();
+            });
+            $('#showIncomes').on('click', function(event) {
+                event.preventDefault();
+                showIncomesTable();
+            });
+            $('#showOccupancy').on('click', function(event) {
+                event.preventDefault();
+                showOccupancyTable();
             });
 
             // User tablosunun verilerini al ve tabloyu güncelle
@@ -498,12 +505,12 @@
                         contentType: 'application/json',
                         data: JSON.stringify(updateData),
                         success: function (response) {
-                            alert('User updated successfully!');
+                            alert('Reservation has been approved as successfully!');
                             $('#ApproveModal').modal('hide');
                             showReservationsTable(); // Tabloyu güncelle
                         },
                         error: function () {
-                            alert('Error updating user.');
+                            alert('Error updating reservation.');
                         }
                     });
                 }
@@ -517,7 +524,7 @@
                     contentType: 'application/json',
                     data: JSON.stringify(updateData),
                     success: function (response) {
-                        alert('User updated successfully!');
+                        alert('Reservation has been rejected as successfully!');
                         $('#RejectModal').modal('hide');
                         showReservationsTable(); // Tabloyu güncelle
                     },
@@ -608,9 +615,89 @@
                     }
                 });
             }
+            function showIncomesTable() {
+                $.ajax({
+                    url: '/api/incomes', // user tablosunu alacak endpoint
+                    method: 'GET',
+                    success: function(data) {
+                        console.log('Veriler alındı:', data); // Verilerin console'da görünüp görünmediğini kontrol et
+
+                        const dataTable = $('#dataTable'); // id=dataTable kullanarak tabloyu referans alıyoruz
+                        const tableHeader = $('#tableHeader');
+                        const tableBody = $('#tableBody');
+
+                        // Önceki içerikleri temizle
+                        tableHeader.empty();
+                        tableBody.empty();
+
+                        // Veriler gelmişse
+                        if (data && data.length > 0) {
+                            // Tablo başlıklarını oluştur
+                            Object.keys(data[0]).forEach(key => {
+                                tableHeader.append(`<th>${key}</th>`);
+                            });
+
+                            // Tablo satırlarını oluştur
+                            data.forEach(row => {
+                                const rowElement = $('<tr></tr>');
+                                Object.values(row).forEach(value => {
+                                    rowElement.append(`<td>${value}</td>`);
+                                });
+                                tableBody.append(rowElement);
+                            });
+                        } else {
+                            tableBody.append('<tr><td colspan="100%">No data available</td></tr>'); // Veri yoksa uyarı
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Hata:', error); // Hata mesajını console'a yazdır
+                        alert('Error fetching data.');
+                    }
+                });
+            }
             function showRoomTable() {
                 $.ajax({
                     url: '/api/rooms/', // user tablosunu alacak endpoint
+                    method: 'GET',
+                    success: function(data) {
+                        console.log('Veriler alındı:', data); // Verilerin console'da görünüp görünmediğini kontrol et
+
+                        const dataTable = $('#dataTable'); // id=dataTable kullanarak tabloyu referans alıyoruz
+                        const tableHeader = $('#tableHeader');
+                        const tableBody = $('#tableBody');
+
+                        // Önceki içerikleri temizle
+                        tableHeader.empty();
+                        tableBody.empty();
+
+                        // Veriler gelmişse
+                        if (data && data.length > 0) {
+                            // Tablo başlıklarını oluştur
+                            Object.keys(data[0]).forEach(key => {
+                                tableHeader.append(`<th>${key}</th>`);
+                            });
+
+                            // Tablo satırlarını oluştur
+                            data.forEach(row => {
+                                const rowElement = $('<tr></tr>');
+                                Object.values(row).forEach(value => {
+                                    rowElement.append(`<td>${value}</td>`);
+                                });
+                                tableBody.append(rowElement);
+                            });
+                        } else {
+                            tableBody.append('<tr><td colspan="100%">No data available</td></tr>'); // Veri yoksa uyarı
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Hata:', error); // Hata mesajını console'a yazdır
+                        alert('Error fetching data.');
+                    }
+                });
+            }
+            function showOccupancyTable() {
+                $.ajax({
+                    url: '/api/occupancy', // user tablosunu alacak endpoint
                     method: 'GET',
                     success: function(data) {
                         console.log('Veriler alındı:', data); // Verilerin console'da görünüp görünmediğini kontrol et
@@ -652,7 +739,8 @@
     </script>
     <h2>Admin Panel</h2>
     <ul>
-        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/api/incomes" id="showIncomes">Incomes</a></li>
+        <li><a href="/api/occupancy" id="showOccupancy">Occupancy</a></li>
         <li><a href="/api/users" id="showUsers">Users</a></li>
         <li><a href="/api/logs" id="showLogs">System Logs</a></li>
         <li><a href="/api/customers" id="showCustomers">Customers</a></li>

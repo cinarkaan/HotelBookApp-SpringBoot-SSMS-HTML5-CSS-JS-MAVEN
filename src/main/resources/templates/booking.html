@@ -15,18 +15,20 @@ body {
             background-color: #f4f4f4;
             margin: auto;
             padding: 0;
+            background-image: url('https://cdn.pixabay.com/photo/2024/12/29/21/18/warsaw-9298784_1280.jpg');
+            background-size: cover; /* Resim alanı tamamen kaplar */
 }
         .container {
             text-align: center;
             width: 75%;
             margin: 10px auto;
-            background: #fff;
+            background: rgba(0, 0, 0, 0);
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
         }
 #regForm {
-  background-color: #ffffff;
+  background: rgba(0, 0, 0, 0.3);
   margin: auto;
   font-family: Raleway;
   padding: 40px;
@@ -34,14 +36,21 @@ body {
   min-width: 300px;
   display: flex;
   flex-direction: column;
-
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
   text-align: center;
+  color: rgb(232, 232, 232);
 }
 h2 {
   text-align: center;
+  color: rgb(232, 232, 232);
+}
+h5 {
+  text-align: center;
+  color: rgb(232, 232, 232);
 }
 
 
@@ -71,7 +80,7 @@ input.invalid {
         button {
             margin-top: auto;
             padding: 10px;
-            background-color: #007bff;
+            background-color: #727272;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -79,7 +88,7 @@ input.invalid {
             font-size: 16px;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #000000;
         }
 #prevBtn {
   background-color: #bbbbbb;
@@ -122,8 +131,8 @@ input.invalid {
         </div>
         <div class="tab"><h2>Room Information</h2>
             <p>
-                <select class="form-control" id="availableRoom" name="availableRoom">
-                    <option value="0">Not Selected</option>
+                <select required class="form-control" id="availableRoom" name="availableRoom">
+                    <option value="0">PLEASE SELECT ROOM ID: , ROOM NO: , ROOM TYPE: ,CAPACITY: , PRICE</option>
                     <option name="availableRoom" th:each="room : ${rooms}" th:value="${room}" th:text="${room}"></option>
                 </select>
             </p>

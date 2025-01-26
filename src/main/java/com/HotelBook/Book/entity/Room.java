@@ -15,7 +15,7 @@ public class Room {
     private int Kapasite;
     private double Fiyat;
     @Enumerated(EnumType.STRING)
-    private RoomType Durum;
+    private RoomStatus Durum;
     private String Aciklama;
     private Date OlusturulmaTarihi;
 
@@ -23,7 +23,7 @@ public class Room {
 
     }
 
-    public Room(String odaNumarasi, String odaTipi, int kapasite, double fiyat, RoomType durum, String aciklama) {
+    public Room(String odaNumarasi, String odaTipi, int kapasite, double fiyat, RoomStatus durum, String aciklama) {
         OdaNumarasi = odaNumarasi;
         OdaTipi = odaTipi;
         Kapasite = kapasite;
@@ -72,11 +72,11 @@ public class Room {
         Fiyat = fiyat;
     }
 
-    public RoomType getDurum() {
+    public RoomStatus getDurum() {
         return Durum;
     }
 
-    public void setDurum(RoomType durum) {
+    public void setDurum(RoomStatus durum) {
         Durum = durum;
     }
 
