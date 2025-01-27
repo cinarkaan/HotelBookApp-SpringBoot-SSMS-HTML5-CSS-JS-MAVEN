@@ -517,6 +517,7 @@
             function RejectCustomer(ID) {
                 const updateData = {
                     durum : 'İptal Edildi',
+                    odemeDurumu: 'Ödenmedi'
                 };
                 $.ajax({
                     url: `/api/customers/${ID}`, // Backend endpoint
