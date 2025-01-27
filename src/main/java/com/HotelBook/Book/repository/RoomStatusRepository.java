@@ -9,4 +9,5 @@ import java.util.List;
 public interface RoomStatusRepository extends JpaRepository<Room,String> {
     @Query(nativeQuery= true, value="SELECT * FROM ODA WHERE Durum = ?")
     List<Room> findByDurum(String Durum);
+
 }
