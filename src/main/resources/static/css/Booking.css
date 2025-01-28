@@ -1,0 +1,111 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: auto;
+  padding: 0;
+  background-image: url("https://cdn.pixabay.com/photo/2024/12/29/21/18/warsaw-9298784_1280.jpg");
+  background-size: cover; /* Resim alanı tamamen kaplar */
+}
+.container {
+  text-align: center;
+  width: 75%;
+  margin: 10px auto;
+  background: rgba(0, 0, 0, 0);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+#regForm {
+  background: rgba(0, 0, 0, 0.3);
+  margin: auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 75%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  text-align: center;
+  color: rgb(232, 232, 232);
+}
+h2 {
+  text-align: center;
+  color: rgb(232, 232, 232);
+}
+h5 {
+  text-align: center;
+  color: rgb(232, 232, 232);
+}
+
+label {
+  margin-top: auto;
+  font-weight: bold;
+}
+input,
+select {
+  width: 75%;
+  padding: 10px;
+  margin-top: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #727272;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #000000;
+}
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: auto;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04aa6d;
+}

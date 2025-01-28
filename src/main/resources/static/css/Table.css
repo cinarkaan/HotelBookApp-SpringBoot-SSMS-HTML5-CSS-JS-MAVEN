@@ -1,0 +1,35 @@
+#dataTable {
+  text-align: center; /* Tablodaki verileri ortalar */
+  width: 100%; /* Tablonun genişliğini %100 yapıyoruz */
+  table-layout: fixed; /* Sabit genişlikte hücreler */
+}
+#dataTable td {
+  white-space: normal; /* Metin kaydırma yapılmasını sağlar */
+  word-wrap: break-word; /* Uzun kelimeleri bile kırar */
+}
+#dataTable th {
+  white-space: normal; /* Başlık metinlerini satır kaydırır */
+  word-wrap: break-word; /* Uzun kelimeleri bile kırar */
+  text-align: center; /* Başlıkları ortalar */
+  font-size: 14px; /* Başlık yazı boyutunu küçültür */
+}
+.table-responsive {
+  overflow-x: auto; /* Yatay kaydırma */
+  white-space: nowrap; /* Uzun satırları kaydırma yerine yatay kaydırmayı zorlar */
+}
+th,
+td {
+  text-align: center; /* Tablodaki verileri ortalar */
+  padding: 5px; /* Hücre içi boşluk */
+  font-size: 12px; /* Yazı tipini küçültme */
+}
+.table-container {
+  text-align: center; /* Tablodaki verileri ortalar */
+  max-width: 900px; /* Maksimum genişlik sınırı */
+  margin: 0 auto; /* Ortalamak için */
+  overflow-x: auto; /* Tablo yatayda taşarsa kaydırma çubuğu ekler */
+}
+/* Tablo başlıklarının yazı tipi boyutunu küçültme */
+th {
+  font-size: 14px;
+}
