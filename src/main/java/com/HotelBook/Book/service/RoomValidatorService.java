@@ -1,6 +1,6 @@
 package com.HotelBook.Book.service;
 
-import com.HotelBook.Book.entity.RoomValidatorDTO;
+import com.HotelBook.Book.DTO.RoomValidatorDTO;
 import com.HotelBook.Book.repository.RoomValidatorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

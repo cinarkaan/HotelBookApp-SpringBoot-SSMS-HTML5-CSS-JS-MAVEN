@@ -1,6 +1,6 @@
 package com.HotelBook.Book.repository;
 
-import com.HotelBook.Book.entity.CustomerPaymentsDTO;
+import com.HotelBook.Book.DTO.CustomerPaymentsDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

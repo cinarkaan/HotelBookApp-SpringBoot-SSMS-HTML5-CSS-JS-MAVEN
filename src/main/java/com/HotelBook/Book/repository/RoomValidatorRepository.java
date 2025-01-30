@@ -1,6 +1,6 @@
 package com.HotelBook.Book.repository;
 
-import com.HotelBook.Book.entity.RoomValidatorDTO;
+import com.HotelBook.Book.DTO.RoomValidatorDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

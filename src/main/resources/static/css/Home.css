@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -30,4 +31,11 @@ h1 {
 }
 .button:hover {
   background-color: #000000;
+}
+
+.montserrat-head {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
 }

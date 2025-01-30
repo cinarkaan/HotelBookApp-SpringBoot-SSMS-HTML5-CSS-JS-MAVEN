@@ -19,6 +19,7 @@ import java.util.Date;
 public class LoginController {
 
     public static int userID;
+    public static String Role;
 
     @Autowired
     private LoginService loginService;
@@ -39,6 +40,7 @@ public class LoginController {
         User user = loginService.authenticate(username,password);
         if (user != null) {
             userID = user.getKullaniciID();
+            Role = user.getRol();
             Log log = new Log(user.getKullaniciID(),"Giriş",username + " adlı kullanıcı sisteme giriş yaptı",getDateCurrent());
             logService.addLogRecord(log);
             return "redirect:dashboard"; // Başarılı giriş sonrası yönlendirme

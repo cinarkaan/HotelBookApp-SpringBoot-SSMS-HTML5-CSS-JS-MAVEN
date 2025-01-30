@@ -1,6 +1,6 @@
 package com.HotelBook.Book.controller;
 
-import com.HotelBook.Book.entity.RoomOccupancyReportDTO;
+import com.HotelBook.Book.DTO.RoomOccupancyReportDTO;
 import com.HotelBook.Book.service.RoomOccupancyReportDTOService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

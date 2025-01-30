@@ -1,6 +1,6 @@
 package com.HotelBook.Book.service;
 
-import com.HotelBook.Book.entity.CustomerReservationDTO;
+import com.HotelBook.Book.DTO.CustomerReservationDTO;
 import com.HotelBook.Book.entity.Reservations;
 import com.HotelBook.Book.repository.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;

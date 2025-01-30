@@ -1,7 +1,7 @@
 package com.HotelBook.Book.controller;
 
 import com.HotelBook.Book.entity.RoomStatus;
-import com.HotelBook.Book.entity.RoomValidatorDTO;
+import com.HotelBook.Book.DTO.RoomValidatorDTO;
 import com.HotelBook.Book.service.RoomService;
 import com.HotelBook.Book.service.RoomValidatorService;
 import org.springframework.beans.factory.annotation.Autowired;

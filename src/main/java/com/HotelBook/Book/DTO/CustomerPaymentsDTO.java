@@ -1,4 +1,4 @@
-package com.HotelBook.Book.entity;
+package com.HotelBook.Book.DTO;
 
 
 import jakarta.persistence.Entity;
