@@ -157,7 +157,7 @@ spring.jpa.hibernate.ddl-auto=update
 	 <h3>To take a look all images that points the project please click on the following link</h3>
 	 <a href="https://drive.google.com/drive/folders/1zWbNxrXG0MAGQw_B5_L2O6vGlTxqEGFH?usp=drive_link" target="_blank">Show Images</a>
 	 <h3>To access ready database that was prepared before please click on the following link</h3>
-	 <a href="https://drive.google.com/drive/folders/1Y9u0SkKRLskxKcjCP3kPqMiQuIh-NMCx?usp=sharing" target="_blank">Download</a>
+	 <a href="https://drive.google.com/drive/folders/1Y9u0SkKRLskxKcjCP3kPqMiQuIh-NMCx?usp=sharing" target="_blank">DataBase</a>
 	
  </body>
 </html>
