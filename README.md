@@ -91,7 +91,7 @@ spring.jpa.hibernate.ddl-auto=update
   <pre>
 					<code>http://localhost:8080</code>
 				</pre>
-  <h2>Screenshots</h2>
+  <h2>The screenshots on the below of this page</h2>
   <p>1. Dashboard Page</p>
   <p>2. Reservation Page</p>
   <p>3. Room Management Page</p>
@@ -156,5 +156,8 @@ spring.jpa.hibernate.ddl-auto=update
   <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for details. </p>
 	 <h3>To take a look all images that points the project please click on the following link</h3>
 	 <a href="https://drive.google.com/drive/folders/1zWbNxrXG0MAGQw_B5_L2O6vGlTxqEGFH?usp=drive_link" target="_blank">Show Images</a>
+	 <h3>To access ready database that was prepared before please click on the following link</h3>
+	 <a href="https://drive.google.com/drive/folders/1Y9u0SkKRLskxKcjCP3kPqMiQuIh-NMCx?usp=sharing" target="_blank">Download</a>
+	
  </body>
 </html>
