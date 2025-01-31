@@ -52,8 +52,8 @@ label {
   margin-top: auto;
   font-weight: bold;
 }
-input,
-select {
+input
+,select,textarea {
   width: 75%;
   padding: 10px;
   margin-top: auto;

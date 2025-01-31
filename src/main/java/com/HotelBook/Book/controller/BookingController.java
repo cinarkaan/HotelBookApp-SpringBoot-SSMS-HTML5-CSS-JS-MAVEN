@@ -68,6 +68,7 @@ public class BookingController {
             @RequestParam String email,
             @RequestParam String phone,
             @RequestParam String address,
+            @RequestParam String notes,
             @RequestParam String tc,
             @RequestParam String availableRoom,
             @RequestParam String checkIn,
@@ -75,7 +76,7 @@ public class BookingController {
             @RequestParam String PaymentType) throws ParseException {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mmm-dd");
         List<String> roomOptions = Arrays.stream(availableRoom.split(",")).toList();
-        Customer customer = new Customer(name,surname,email,phone,address,tc,getDateCurrent());
+        Customer customer = new Customer(name,surname,email,phone,address,notes,tc,getDateCurrent());
         Customer addedCustomer = customerService.addCustomer(customer);
         Reservations reservations = new Reservations(customer.getMusteriID(), Integer.parseInt(roomOptions.get(0)), simpleDateFormat.parse(checkIn),simpleDateFormat.parse(checkOut),Integer.parseInt(roomOptions.get(3)),"Ödenmedi","Beklemede",getDateCurrent());
         Reservations addedReservation = reservationService.addReservation(reservations);

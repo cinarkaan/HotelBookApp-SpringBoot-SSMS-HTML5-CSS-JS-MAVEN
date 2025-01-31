@@ -30,15 +30,17 @@ function conditionalRender (Role) {
 
     if (Role === 'Staff') {
 
-        var incomes = document.getElementById('showIncomes');
-        var users = document.getElementById('showUsers');
-        var logs = document.getElementById('showLogs');
-        var occupancy = document.getElementById('showOccupancy');
+        var panel = document.getElementById('Panel');
+        var incomes = document.getElementById('Incomes');
+        var users = document.getElementById('Users');
+        var logs = document.getElementById('Logs');
+        var occupancy = document.getElementById('Occupancy');
 
-        incomes.style.display = "none";
-        users.style.display = "none";
-        logs.style.display = "none";
-        occupancy.style.display = "none";
+        incomes.remove();
+        users.remove();
+        logs.remove();
+        occupancy.remove();
+        panel.innerText = 'Staff Panel';
 
     } else {
 

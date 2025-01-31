@@ -19,6 +19,7 @@ public class Customer {
     private String Telefon;
     private String Email;
     private String Adres;
+    private String Notlar;
     private String TCNO;
     private Date OlusturulmaTarihi;
 
@@ -28,12 +29,21 @@ public class Customer {
 
     }
 
-    public Customer(String ad, String soyad, String telefon, String email, String adres, String TCNO,Date olusturulmaTarihi) {
+    public String getNotlar() {
+        return Notlar;
+    }
+
+    public void setNotlar(String notlar) {
+        Notlar = notlar;
+    }
+
+    public Customer(String ad, String soyad, String telefon, String email, String adres, String Notes, String TCNO, Date olusturulmaTarihi) {
         Ad = ad;
         Soyad = soyad;
         Telefon = telefon;
         Email = email;
         Adres = adres;
+        this.Notlar = Notes;
         this.TCNO = TCNO;
         this.OlusturulmaTarihi = olusturulmaTarihi;
     }
