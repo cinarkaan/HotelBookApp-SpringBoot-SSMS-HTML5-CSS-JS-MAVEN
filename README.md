@@ -72,9 +72,9 @@ cd &lt;project-name&gt;
   <p>Edit the <code>application.properties</code> file with your database credentials: </p>
   <pre>
 					<code>
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=hotel_reservation
-spring.datasource.username=&lt;username&gt;
-spring.datasource.password=&lt;password&gt;
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=HotelBook
+spring.datasource.username=// You can put blank
+spring.datasource.password=// You can put blank
 spring.jpa.hibernate.ddl-auto=update
         </code>
 				</pre>
