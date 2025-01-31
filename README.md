@@ -75,7 +75,7 @@ cd &lt;project-name&gt;
 spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=HotelBook
 spring.datasource.username=// You can put blank
 spring.datasource.password=// You can put blank
-spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.ddl-auto=none
         </code>
 				</pre>
   <h3>3. Install Dependencies</h3>
