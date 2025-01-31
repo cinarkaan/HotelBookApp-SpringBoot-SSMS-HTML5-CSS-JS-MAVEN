@@ -43,6 +43,9 @@
    </li>
    <li>
     <b>AJAX:</b> For asynchronous requests
+   </li>  
+   <li>
+    <b>WebSocket:</b> To make authorization
    </li>
   </ul>
   <h2>Installation Instructions</h2>
