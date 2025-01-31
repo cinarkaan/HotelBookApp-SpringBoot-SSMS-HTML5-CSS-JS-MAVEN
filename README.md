@@ -95,9 +95,6 @@ spring.jpa.hibernate.ddl-auto=none
   <p>1. Dashboard Page</p>
   <p>2. Reservation Page</p>
   <p>3. Room Management Page</p>
-  <p>
-   <i>Note:</i> You can add screenshots to the <code>images</code> folder and include them here using the <code>&lt;img&gt;</code> tag.
-  </p>
   <h2>API Endpoints</h2>
   <table>
    <thead>
