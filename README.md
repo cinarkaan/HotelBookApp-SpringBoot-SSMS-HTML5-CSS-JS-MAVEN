@@ -3,49 +3,9 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    .slider {
-      width: 80%;
-      height: 500px;
-      margin: 20px auto;
-      background-size: cover;
-      background-position: center;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      /* İsteğe bağlı: görsel geçiş efekti için animasyon ekleyebilirsiniz */
-      transition: background-image 1s ease-in-out;
-    }
-  </style>
+
  </head>
-<script>
-    // Resim URL'lerinin listesi (11 adet)
-    const images = [
-      'https://drive.google.com/file/d/1VLx2QvYxHDScQ9f4ezqMie-4f7EJgUm6/view?usp=drive_link',
-      'https://drive.google.com/file/d/17edE20mmDtJwe_dhqyTEAikOwCm75RFd/view?usp=drive_link',
-      'https://drive.google.com/file/d/1NxnDoc7Fr4yOulkmuPLTD7DXkT2PUcbH/view?usp=drive_link',
-      'https://drive.google.com/file/d/1gqqpPuuli6MQB3NavPoQP5fwvRudHtzi/view?usp=drive_link',
-      'https://drive.google.com/file/d/1bT-FwVoAUpSlq0R56LoqUoLKwqjYCLnG/view?usp=drive_link',
-      'https://drive.google.com/file/d/16W4VccwzQBoGmtHm49soG-9muphwVHPY/view?usp=drive_link',
-      'https://drive.google.com/file/d/1T_Rirlvy2DNhheqMCauws98_w0XgTPK3/view?usp=drive_link',
-      'https://drive.google.com/file/d/1UEM11dtBwoLEsKAQcvwKpq57fbaqbOr7/view?usp=drive_link',
-      'https://drive.google.com/file/d/1XnktXC392BUffoTRjtuINTPkgKNcMep1/view?usp=drive_link',
-      'https://drive.google.com/file/d/13c9dx72tU2OqjlbCIHir03lCOPE_mkwA/view?usp=drive_link',
-      'https://drive.google.com/file/d/10X5KFGFBA6lfWH0Gw2YFVV-oB1iN9UKS/view?usp=drive_link'
-    ];
-    let currentImageIndex = 0;
-    const slider = document.getElementById('slider');
-    // Resmi değiştiren fonksiyon
-    function changeImage() {
-      // Mevcut resmi arka plan olarak ayarla
-      slider.style.backgroundImage = `url('${images[currentImageIndex]}')`;
-      // İndeksi güncelle (dizinin sonuna geldiğinde başa döner)
-      currentImageIndex = (currentImageIndex + 1) % images.length;
-    }
-    // İlk resmi hemen göster
-    changeImage();
-    // Belirli aralıklarla resim değiştir (örneğin her 3 saniyede)
-    setInterval(changeImage, 3000);
-  </script>
+
  <body>
   <h1>Hotel Reservation System</h1>
   <p> This project is designed to manage a hotel reservation system. The system allows users to book reservations, manage customer information, and handle hotel rooms. It is developed using modern technologies and provides a user-friendly interface. </p>
@@ -191,7 +151,7 @@ spring.jpa.hibernate.ddl-auto=update
   </ol>
   <h2>License</h2>
   <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for details. </p>
-  <div class="slider" id="slider"></div>
-
+	 <h3>To take a look all images that points the project please cilck on the following link</h3>
+	 <a href="https://drive.google.com/drive/folders/1zWbNxrXG0MAGQw_B5_L2O6vGlTxqEGFH?usp=drive_link"/>
  </body>
 </html>
