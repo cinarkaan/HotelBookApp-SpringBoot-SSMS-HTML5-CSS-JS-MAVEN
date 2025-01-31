@@ -57,7 +57,7 @@ cd &lt;project-name&gt;
         </code>
 				</pre>
   <h3>2. Set Up the Database</h3>
-  <p> Use <b>SSMS</b> to create your database and configure the tables as follows: </p>
+  <p> Use <b>SSMS</b> to create your database and configure the tables as follows: (Available below of the page.)</p>
   <ul>
    <li>
     <code>users</code> table (for user information)
