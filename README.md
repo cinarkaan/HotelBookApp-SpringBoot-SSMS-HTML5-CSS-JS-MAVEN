@@ -151,7 +151,7 @@ spring.jpa.hibernate.ddl-auto=update
   </ol>
   <h2>License</h2>
   <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for details. </p>
-	 <h3>To take a look all images that points the project please cilck on the following link</h3>
-	 <a href="https://drive.google.com/drive/folders/1zWbNxrXG0MAGQw_B5_L2O6vGlTxqEGFH?usp=drive_link"/>
+	 <h3>To take a look all images that points the project please click on the following link</h3>
+	 <a href="https://drive.google.com/drive/folders/1zWbNxrXG0MAGQw_B5_L2O6vGlTxqEGFH?usp=drive_link" target="_blank">Show Images</a>
  </body>
 </html>
