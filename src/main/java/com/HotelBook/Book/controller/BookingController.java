@@ -18,10 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 
 @Controller
@@ -73,16 +70,23 @@ public class BookingController {
             @RequestParam String availableRoom,
             @RequestParam String checkIn,
             @RequestParam String checkOut,
-            @RequestParam String PaymentType) throws ParseException {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mmm-dd");
-        List<String> roomOptions = Arrays.stream(availableRoom.split(",")).toList();
-        Customer customer = new Customer(name,surname,email,phone,address,notes,tc,getDateCurrent());
-        Customer addedCustomer = customerService.addCustomer(customer);
-        Reservations reservations = new Reservations(customer.getMusteriID(), Integer.parseInt(roomOptions.get(0)), simpleDateFormat.parse(checkIn),simpleDateFormat.parse(checkOut),Integer.parseInt(roomOptions.get(3)),"Ödenmedi","Beklemede",getDateCurrent());
-        Reservations addedReservation = reservationService.addReservation(reservations);
-        Payments payments = new Payments(reservations.getRezervasyonID(),Double.parseDouble(roomOptions.get(4)),PaymentType,getDateCurrent());
-        paymentService.addPayment(payments);
-        return "redirect:/";
+            @RequestParam String PaymentType, Model model) throws ParseException {
+        if (Objects.equals(availableRoom, "0")){
+            model.addAttribute("error", "Please Select A Valid Room !");
+            return "booking";
+        }
+            else {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MMM-dd");
+            List<String> roomOptions = Arrays.stream(availableRoom.split(",")).toList();
+            Customer customer = new Customer(name,surname,email,phone,address,notes,tc,getDateCurrent());
+            Customer addedCustomer = customerService.addCustomer(customer);
+            Reservations reservations = new Reservations(customer.getMusteriID(), Integer.parseInt(roomOptions.get(0)), simpleDateFormat.parse(checkIn),simpleDateFormat.parse(checkOut),Integer.parseInt(roomOptions.get(3)),"Ödenmedi","Beklemede",getDateCurrent());
+            Reservations addedReservation = reservationService.addReservation(reservations);
+            Payments payments = new Payments(reservations.getRezervasyonID(),Double.parseDouble(roomOptions.get(4)),PaymentType,getDateCurrent());
+            paymentService.addPayment(payments);
+            return "redirect:/";
+        }
+
     }
 
 }

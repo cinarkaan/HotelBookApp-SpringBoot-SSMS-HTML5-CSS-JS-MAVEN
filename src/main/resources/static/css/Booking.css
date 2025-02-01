@@ -109,3 +109,8 @@ button:hover {
 .step.finish {
   background-color: #04aa6d;
 }
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

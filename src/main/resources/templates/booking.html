@@ -27,6 +27,7 @@
                     <option name="availableRoom" th:each="room : ${rooms}" th:value="${room}" th:text="${room}"></option>
                 </select>
             </p>
+
         </div>
         <div class="tab"><h2>Reservation Information</h2>
             <p>
@@ -59,6 +60,7 @@
             <span class="step"></span>
         </div>
     </form>
+    <div class="error" th:if="${error}" th:text="${error}"></div>
 </div>
 </body>
 <script src="../js/Booking.js" type="text/javascript"></script>

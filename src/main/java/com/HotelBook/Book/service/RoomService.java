@@ -33,7 +33,7 @@ public class RoomService {
         Optional<Room> roomOptional = roomRepository.findById(ID);
         System.out.println(roomOptional.isPresent() + "-----");
         if (roomOptional.isPresent()) {
-            roomOptional.get().setDurum(RoomStatus.Dolu);
+            roomOptional.get().setDurum(roomStatus);
             return roomRepository.save(roomOptional.get());
         } else {
             throw new RuntimeException("User not found");

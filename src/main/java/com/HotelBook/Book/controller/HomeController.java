@@ -23,6 +23,7 @@ public class HomeController {
 
     public void roomValidator () {
         List<RoomValidatorDTO> approved = roomValidatorService.validatorList();
+        System.out.println(approved.size());
         if (approved.size() > 0)
             approved.forEach(a -> roomService.updateRoom((long)a.getOdaID(), RoomStatus.valueOf(a.getRoomStatus())));
         System.out.println("Room status has been updated successfully");
