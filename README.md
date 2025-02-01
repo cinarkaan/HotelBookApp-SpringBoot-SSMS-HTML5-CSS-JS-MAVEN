@@ -3,8 +3,9 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>README</title>
+
  </head>
+
  <body>
   <h1>Hotel Reservation System</h1>
   <p> This project is designed to manage a hotel reservation system. The system allows users to book reservations, manage customer information, and handle hotel rooms. It is developed using modern technologies and provides a user-friendly interface. </p>
@@ -42,6 +43,9 @@
    </li>
    <li>
     <b>AJAX:</b> For asynchronous requests
+   </li>  
+   <li>
+    <b>WebSocket:</b> To make authorization
    </li>
   </ul>
   <h2>Installation Instructions</h2>
@@ -53,7 +57,7 @@ cd &lt;project-name&gt;
         </code>
 				</pre>
   <h3>2. Set Up the Database</h3>
-  <p> Use <b>SSMS</b> to create your database and configure the tables as follows: </p>
+  <p> Use <b>SSMS</b> to create your database and configure the tables as follows: (Available below of the page.)</p>
   <ul>
    <li>
     <code>users</code> table (for user information)
@@ -68,10 +72,10 @@ cd &lt;project-name&gt;
   <p>Edit the <code>application.properties</code> file with your database credentials: </p>
   <pre>
 					<code>
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=hotel_reservation
-spring.datasource.username=&lt;username&gt;
-spring.datasource.password=&lt;password&gt;
-spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=HotelBook
+spring.datasource.username=// You can put blank
+spring.datasource.password=// You can put blank
+spring.jpa.hibernate.ddl-auto=none
         </code>
 				</pre>
   <h3>3. Install Dependencies</h3>
@@ -87,13 +91,10 @@ spring.jpa.hibernate.ddl-auto=update
   <pre>
 					<code>http://localhost:8080</code>
 				</pre>
-  <h2>Screenshots</h2>
+  <h2>The screenshots on the below of this page</h2>
   <p>1. Dashboard Page</p>
   <p>2. Reservation Page</p>
   <p>3. Room Management Page</p>
-  <p>
-   <i>Note:</i> You can add screenshots to the <code>images</code> folder and include them here using the <code>&lt;img&gt;</code> tag.
-  </p>
   <h2>API Endpoints</h2>
   <table>
    <thead>
@@ -150,5 +151,10 @@ spring.jpa.hibernate.ddl-auto=update
   </ol>
   <h2>License</h2>
   <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for details. </p>
+	 <h3>To take a look all images that points the project please click on the following link</h3>
+	 <a href="https://drive.google.com/drive/folders/1zWbNxrXG0MAGQw_B5_L2O6vGlTxqEGFH?usp=drive_link" target="_blank">Show Images</a>
+	 <h3>To access ready database that was prepared before please click on the following link</h3>
+	 <a href="https://drive.google.com/drive/folders/1Y9u0SkKRLskxKcjCP3kPqMiQuIh-NMCx?usp=sharing" target="_blank">DataBase</a>
+	
  </body>
 </html>
