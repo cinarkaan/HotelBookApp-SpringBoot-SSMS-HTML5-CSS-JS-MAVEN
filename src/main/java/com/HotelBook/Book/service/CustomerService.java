@@ -13,7 +13,6 @@ public class CustomerService {
     @Autowired(required = true)
     private CustomerRepository customerRepository;
 
-
     public List<Customer> getAllCustomer() {
         return customerRepository.findAll();
     }

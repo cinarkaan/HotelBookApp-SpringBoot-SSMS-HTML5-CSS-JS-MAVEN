@@ -17,6 +17,10 @@ public class CustomerReservationDTOService {
         return customerReservationRepository.getAllApplications("Beklemede");
     }
 
+    public List<CustomerReservationDTO> getApplicationsByTc (String tc) {
+        return customerReservationRepository.getAllApplicationsByTC(tc);
+    }
+
 
 
 }

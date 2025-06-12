@@ -15,4 +15,13 @@ public interface CustomerReservationRepository extends JpaRepository<CustomerRes
             "\t\t\t\tinner join Oda o on o.OdaID = r.OdaID where r.Durum = ?;")
     List<CustomerReservationDTO> getAllApplications(String Durum);
 
+    @Query(nativeQuery = true , value = "SELECT \n" +
+            "\tm.MusteriID,r.RezervasyonID,o.OdaID,m.Ad,m.Soyad,o.OdaNumarasi,r.GirisTarihi,r.CikisTarihi,r.OdemeDurumu,r.Durum \n" +
+            "\t\tFROM Musteri m \n" +
+            "\t\t\tinner join Rezervasyon r on m.MusteriID = r.MusteriID \n" +
+            "\t\t\t\tinner join Oda o on o.OdaID = r.OdaID where m.TCNO = ?;")
+    List<CustomerReservationDTO> getAllApplicationsByTC(String tc);
+
+
+
 }

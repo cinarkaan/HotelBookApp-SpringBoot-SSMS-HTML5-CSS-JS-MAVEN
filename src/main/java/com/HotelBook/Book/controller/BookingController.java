@@ -76,7 +76,7 @@ public class BookingController {
             return "booking";
         }
             else {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MMM-dd");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
             List<String> roomOptions = Arrays.stream(availableRoom.split(",")).toList();
             Customer customer = new Customer(name,surname,email,phone,address,notes,tc,getDateCurrent());
             Customer addedCustomer = customerService.addCustomer(customer);

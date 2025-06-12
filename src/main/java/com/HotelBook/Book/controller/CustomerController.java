@@ -6,6 +6,7 @@ import com.HotelBook.Book.entity.*;
 import com.HotelBook.Book.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
@@ -14,6 +15,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+@Controller
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerController {
