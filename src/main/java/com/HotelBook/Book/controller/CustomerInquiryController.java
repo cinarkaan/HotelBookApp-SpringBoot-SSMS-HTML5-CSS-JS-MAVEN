@@ -31,6 +31,8 @@ public class CustomerInquiryController {
             for (CustomerReservationDTO c: list) {
                 model.addAttribute("Name",c.getAd());
                 model.addAttribute("Surname",c.getSoyad());
+                model.addAttribute("CustomerId",c.getMusteriID());
+                model.addAttribute("ReservationId",c.getRezervasyonID());
                 model.addAttribute("EnterDate",c.getGirisTarihi().toString());
                 model.addAttribute("DepartureDate",c.getCikisTarihi().toString());
                 model.addAttribute("RoomNo",c.getOdaNumarasi());
