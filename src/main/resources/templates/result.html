@@ -5,10 +5,34 @@
     <meta charset="UTF-8">
     <title>Result</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Table.css">
+    <!--<link rel="stylesheet" href="../css/Table.css">-->
+    <link rel="stylesheet" href="../css/inquiryTable.css">
+
 </head>
 <body>
+<div class="container">
+    <h2>INQUIRY RESULT</h2>
+    <ul class="responsive-table">
+        <li class="table-header">
+            <div class="col col-1">Name</div>
+            <div class="col col-2">Surname</div>
+            <div class="col col-3">EnterDate</div>
+            <div class="col col-4">DepartureDate</div>
+            <div class="col col-4">RoomNo</div>
+            <div class="col col-4">Status</div>
+        </li>
+        <li class="table-row">
+            <div class="col col-1" data-label="Name"><p th:text="${Name}"/></div>
+            <div class="col col-2" data-label="Surname"><p th:text="${Surname}"/></div>
+            <div class="col col-3" data-label="EnterDate"><p th:text="${EnterDate}"/></div>
+            <div class="col col-4" data-label="DepartureDate"><p th:text="${DepartureDate}"/></div>
+            <div class="col col-4" data-label="RoomNo"><p th:text="${RoomNo}"/></div>
+            <div class="col col-4" data-label="Status"><p th:text="${Status}"/></div>
+        </li>
+    </ul>
+</div>
 
+<!--
 <div style="margin: auto;">
     <h2 style="text-align: center; margin: 0 auto">Sorgulanan Müşteri</h2>
     <table style="margin: 0 auto">
@@ -34,5 +58,6 @@
         </tr>
     </table>
 </div>
+-->
 </body>
 </html>

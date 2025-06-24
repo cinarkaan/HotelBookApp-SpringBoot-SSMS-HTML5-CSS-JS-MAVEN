@@ -10,8 +10,8 @@
 <div class="container">
     <h1>Reservation Inquiry</h1>
     <form action="/result" method="post">
-        <label for="TC">TC NO</label>
-        <input type="number" id="TC" name="TC" placeholder="Lütfen tc kimlik numaranızı giriniz !!!" required>
+        <label for="TC">TC</label>
+        <input type="number" id="TC" name="TC" placeholder="Your TC" required>
         <button type="submit">Inquiry</button>
     </form>
     <div class="error" th:if="${error}" th:text="${error}"></div>
