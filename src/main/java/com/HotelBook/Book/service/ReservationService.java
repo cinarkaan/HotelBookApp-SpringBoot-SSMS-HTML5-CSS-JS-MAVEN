@@ -23,6 +23,8 @@ public class ReservationService {
         System.out.println(reservationsOptional.isPresent());
         if (reservationsOptional.isPresent()) {
                 reservationsOptional.get().setDurum(customerReservationDTO.getDurum());
+                reservationsOptional.get().setGirisTarihi(customerReservationDTO.getGirisTarihi());
+                reservationsOptional.get().setCikisTarihi(customerReservationDTO.getCikisTarihi());
                 reservationsOptional.get().setOdemeDurumu(customerReservationDTO.getOdemeDurumu());
                 return reservationRepository.save(reservationsOptional.get());
         } else {

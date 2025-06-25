@@ -5,59 +5,87 @@
     <meta charset="UTF-8">
     <title>Result</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="../css/Table.css">-->
-    <link rel="stylesheet" href="../css/inquiryTable.css">
-
+    <link rel="stylesheet" href="../css/Inquiry.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="myContainer">
     <h2>INQUIRY RESULT</h2>
-    <ul class="responsive-table">
-        <li class="table-header">
+    <ul class="myResponsive-table">
+        <li class="myTable-header">
             <div class="col col-1">Name</div>
             <div class="col col-2">Surname</div>
             <div class="col col-3">EnterDate</div>
-            <div class="col col-4">DepartureDate</div>
+            <div class="col col-3">DepartureDate</div>
             <div class="col col-4">RoomNo</div>
             <div class="col col-4">Status</div>
+            <div class="col col-4">Rollback</div>
+            <div class="col col-4">Postpone</div>
         </li>
-        <li class="table-row">
+
+        <li class="myTable-row">
             <div class="col col-1" data-label="Name"><p th:text="${Name}"/></div>
             <div class="col col-2" data-label="Surname"><p th:text="${Surname}"/></div>
             <div class="col col-3" data-label="EnterDate"><p th:text="${EnterDate}"/></div>
-            <div class="col col-4" data-label="DepartureDate"><p th:text="${DepartureDate}"/></div>
+            <div class="col col-3" data-label="DepartureDate"><p th:text="${DepartureDate}"/></div>
             <div class="col col-4" data-label="RoomNo"><p th:text="${RoomNo}"/></div>
             <div class="col col-4" data-label="Status"><p th:text="${Status}"/></div>
+            <div class="col col-4" data-label="Status"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Rollback</button>
+            </div>
+            <div class="col col-4" data-label="Status"><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#postpone">Postpone</button>
+            </div>
         </li>
     </ul>
+    <div style="text-align : center;" th:if="${info}" th:text="${info}"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Cancel Reservation</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Your reservation will be canceled as permanently!!! Do want to continue progress ? </p>
+                </div>
+                <div class="modal-footer">
+                <form action="/rollback" method="post">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button class="btn btn-danger" type="submit">Rollback</button>
+                    <!--<a class="btn btn-danger" href="/rollback">Rollback</a>-->
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="postpone" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Cancel Reservation</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Your reservation will be altered as permanently!!! Do want to continue progress ? </p>
+                </div>
+                <div class="modal-footer">
+                    <form action="/postpone" method="post">
+                        <input type="date" id="checkIn" name="checkIn" required>
+                        <input type="date" id="checkOut" name="checkOut" required>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button class="btn btn-warning" type="submit">Postpone</button>
+                        <!--<a class="btn btn-danger" href="/rollback">Rollback</a>-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!--
-<div style="margin: auto;">
-    <h2 style="text-align: center; margin: 0 auto">Sorgulanan Müşteri</h2>
-    <table style="margin: 0 auto">
-        <tr>
-            <th>Müşteri Numarasi</th>
-            <th>Ad</th>
-            <th>Soyad</th>
-            <th>Rezervasyon Numarasi</th>
-            <th>Giriş Tarihi</th>
-            <th>Çıkış Tarihi</th>
-            <th>Oda Numarası</th>
-            <th>Durum</th>
-        </tr>
-        <tr>
-            <td><p th:text="${CustomerId}" /></td>
-            <td><p th:text="${Name}" /></td>
-            <td><p th:text="${Surname}" /></td>
-            <td><p th:text="${ReservationId}" /></td>
-            <td><p th:text="${EnterDate}" /></td>
-            <td><p th:text="${DepartureDate}" /></td>
-            <td><p th:text="${RoomNo}" /></td>
-            <td><p th:text="${Status}" /></td>
-        </tr>
-    </table>
-</div>
--->
 </body>
 </html>
